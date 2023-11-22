@@ -1,7 +1,35 @@
 {{define "home"}}
+<style>
+    :root {
+        color-scheme: dark;
+    }
+    ul {
+  list-style: none;
+}
+
+ul li::before {
+  content: "\1F6CC  ... ";
+  /* color: red; */
+  /* font-weight: bold; */
+  /* display: inline-block;  */
+  /* width: 1em; */
+  /* margin-left: -1em; */
+}
+a {
+    margin-left: 5px;
+}
+</style>
+<ul>
+{{range .Path}}
+<li><a href="{{.Url}}">{{.Nume}}</a></li>
+{{end}}
+</ul>
 {{.}}
-{{.t1}}
-{{.t2}}
-{{.t3}}
-{{.t4}} -> {{.t4.A}}
+<h2>{{.Nume}}</h2>
+<ul>
+{{range .Numere}}
+    <li class="lista">{{.}}</li>
+{{end}}
+</ul>
+
 {{end}}
