@@ -1,9 +1,10 @@
 package main
 
 import (
-	"ehut/cmd/web"
 	"flag"
 	"log"
+
+	"github.com/GGCasa/ehut/cmd/web"
 )
 
 func main() {
