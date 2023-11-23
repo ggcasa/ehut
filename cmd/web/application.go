@@ -5,11 +5,14 @@ import (
 	"log"
 	"net/http"
 	"path/filepath"
+
+	"github.com/GGCasa/luni"
 )
 
 var (
-	d = "./ui/html/ehut/*.gohtml"
-	n = "home"
+	d  = "./ui/html/ehut/*.gohtml"
+	n  = "home"
+	KV luni.Conn
 )
 
 type PathUrl struct {
